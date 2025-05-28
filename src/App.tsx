@@ -1,9 +1,7 @@
+import UsersPage from "./pages/UsersPage";
+
 function App() {
-  return (
-    <>
-      <div>Hello world</div>
-    </>
-  );
+  return <UsersPage />;
 }
 
 export default App;
