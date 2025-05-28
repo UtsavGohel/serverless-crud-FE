@@ -1,54 +1,93 @@
-# React + TypeScript + Vite
+# 🚀 React + Serverless CRUD App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple **React + TypeScript** frontend that performs CRUD operations using a **Serverless backend API (AWS Lambda)**. The app allows users to add, edit, delete, and view user data such as name, email, age, phone number, and address.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React + TypeScript + TailwindCSS
+- **Backend**: Serverless API (e.g., AWS Lambda)
+- **HTTP Client**: Axios
+- **Tooling**: Vite
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📋 Features
+
+✅ Add new users  
+✅ Edit existing users  
+✅ Delete users  
+✅ View all users  
+✅ Cancel edit and reset form  
+✅ Auto-clear form on submit or cancel  
+
+---
+
+## 🧾 Fields Managed
+
+Each user object includes:
+
+- `name` (string)
+- `email` (string)
+- `age` (number)
+- `phone` (string)
+- `address` (string)
+
+> The backend auto-generates a `userId`, used only for updates and deletions.
+
+---
+
+## 🌐 Serverless API URL
+
+Make sure to set your serverless API base URL in the `.env` file:
+
+```env
+VITE_API_BASE=https://your-serverless-api-url.com/users
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Installation
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+To run this project locally, follow these steps:
+
+### Prerequisites
+
+Make sure you have **Node.js** installed. If not, you can install it from [nodejs.org](https://nodejs.org/).
+
+### Clone the repository
+
+```bash
+git clone https://github.com/UtsavGohel/serverless-crud-FE.git
+cd serverless-crud-FE
 ```
+Install dependencies
+
+```bash
+npm install
+```
+
+Copy `.env.example` into `.env` file
+
+Run the development server
+
+```bash
+npm run dev
+```
+
+Open your browser and navigate to http://localhost:5173 to see the app in action.
+
+
+
+## Contributing
+
+Feel free to fork this project and submit pull requests. If you find any bugs or have suggestions for improvements, open an issue in the GitHub repository.
+
+
+## Contact
+
+For any questions or feedback, feel free to reach out:
+
+Email: utsavgohel2002@gmail.com
+
+GitHub: https://github.com/UtsavGohel
